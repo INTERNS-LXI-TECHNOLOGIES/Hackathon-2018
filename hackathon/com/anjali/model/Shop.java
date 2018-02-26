@@ -11,8 +11,8 @@ public class Shop {
 private String shopName ;
 private Inventory inventory ;
 private int totalSales ;
-private List<Customer> customerList ;
-private InventoryController inventorycontroller;
+private  List<Customer> customerList ;
+private  InventoryController inventorycontroller;
 private SaleController  SaleController ;
 
 public void setShopName(String shopName){
@@ -39,19 +39,19 @@ public int getTotalSales(){
 	return totalSales;
 }
 
-public void setTotalSales(List<Customer> customers){
-	this.customers=customers;
+public void setCustomerList(List<Customer> customerList){
+	this.customerList=customerList;
 }
 
-public List<Customer> getTotalSales(){
-	return customers;
+public List<Customer> getCustomerList(){
+	return customerList;
 }
 
 
 
 
-public static void main(String args[]){
-Scanner sc=new Scanner();
+public void inventoryShopping(){
+Scanner sc=new Scanner(System.in);
 
 //Create Shop
 Shop shop=new Shop();
@@ -65,23 +65,29 @@ int number=sc.nextInt();
 
 for(int i=0;i<number;i++){
 	Customer customer=new Customer();
-	System.out.println("enter customer name;");
+	System.out.println("enter customer name");
 	customer.setName(sc.next());
-	System.out.println("enter customers cash in hand;");
+	System.out.println("enter customers cash in hand");
 	customer.setCashInHand(sc.nextInt());
 	customerList.add(customer);
 
 }
 
 //@Create Inventory in Shopp
-	inventory=new Inventory();
-	System.out.println("enter number of products in inventory;");
+	System.out.println("enter number of products in inventory");
 	int nuOfProducts=sc.nextInt();
+	//inventory=new Inventory();
 	
-
-inventory.productList=new ArrayList<Product>();
-
-
+	for(int i=0;i<nuOfProducts;i++){
+		Product product=new Product();
+		System.out.println("enter product name");
+		product.setName(sc.next());
+		System.out.println("enter product description");
+		product.setDescription(sc.next());	
+		inventorycontroller=new InventoryControllerImpl();
+		inventorycontroller.addStockToInventory(product,nuOfProducts,inventory);
+		//inventory.setProduct(product);
+	}
 
 //@Conduct sale 
 

@@ -12,16 +12,16 @@ public void setName(String name){
 	this.name=name;
 }
 
-public void getName(){
+public String getName(){
 	return name;	
 }
 
-public void setCashInHand(String name){
-	this.name=name;
+public void setCashInHand(int cashInHand){
+	this.cashInHand=cashInHand;
 }
 
-public void getCashInHand(){
-	return name;
+public int getCashInHand(){
+	return cashInHand;
 }
 
 }

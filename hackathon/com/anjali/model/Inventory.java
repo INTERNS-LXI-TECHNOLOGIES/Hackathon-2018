@@ -3,9 +3,20 @@
 */
 
 package com.anjali.model;
+import java.util.*;
 
 public class Inventory{
-	 private List<Product> productList;
+	
+	private Product product;
+	 
+	public void setProduct(Product product){
+		this.product=product;
+	}
+
+	public Product getProduct(){
+		return product;
+	}
+	/* private List<Product> productList;
 
 	 
 	public void setProducts(List<Product> productList){
@@ -14,7 +25,7 @@ public class Inventory{
 
 	public List<Product> getProducts(){
 		return customers;
-	}
+	}*/
 
 
 

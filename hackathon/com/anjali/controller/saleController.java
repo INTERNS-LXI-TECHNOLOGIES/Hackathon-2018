@@ -3,12 +3,13 @@
 */
 
 package com.anjali.controller;
+import com.anjali.model.*;
 
-public class SaleController {
+public abstract class SaleController {
 
-amount  sell(Product productShopped, quantity) ;
+public abstract int sell(Product productShopped, int quantity) ;
 
-totalAmount() ;
+public abstract void totalAmount() ;
 
 
 }
