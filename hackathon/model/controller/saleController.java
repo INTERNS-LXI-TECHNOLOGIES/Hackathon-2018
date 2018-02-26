@@ -1,11 +1,11 @@
 package hackathon.model.controller;
-class SaleController {
+class SaleController  {
 
 
 
 
 
-amount  sell(Product productShopped, quantity) ;
+amount  sell(Product productShopped,int  quantity) ;
 
 
 totalAmount() ;

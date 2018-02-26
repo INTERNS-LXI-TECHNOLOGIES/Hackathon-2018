@@ -1,8 +1,8 @@
 package hackathon.model.controller;
-class InventoryControll {
+class InventoryControll extends Inventory {
 
 
-List<Products> inventory ;
+List<Product> inventory  = new ArrayList<Product>();
 
 
 @override
