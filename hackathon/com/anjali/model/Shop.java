@@ -3,6 +3,8 @@
 */
 
 package com.anjali.model;
+import java.util.*;
+import com.anjali.controller.*;
 
 public class Shop {
 
@@ -50,12 +52,18 @@ public List<Customer> getTotalSales(){
 
 public static void main(String args[]){
 Scanner sc=new Scanner();
+
 //Create Shop
+Shop shop=new Shop();
+shop.shopName="Big Bazar";
+shop.totalSales=10000;
 
 //@Create Customers in Shop
 customerList=new ArrayList<Customer>();
+System.out.println("enter number of customers to add:");
+int number=sc.nextInt();
 
-for(int i=0;i<2;i++){
+for(int i=0;i<number;i++){
 	Customer customer=new Customer();
 	System.out.println("enter customer name;");
 	customer.setName(sc.next());
@@ -66,6 +74,15 @@ for(int i=0;i<2;i++){
 }
 
 //@Create Inventory in Shopp
+	inventory=new Inventory();
+	System.out.println("enter number of products in inventory;");
+	int nuOfProducts=sc.nextInt();
+	
+
+inventory.productList=new ArrayList<Product>();
+
+
+
 //@Conduct sale 
 
 }

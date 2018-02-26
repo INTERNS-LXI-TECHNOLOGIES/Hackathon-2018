@@ -3,6 +3,7 @@
 */
 
 package com.anjali.model;
+import java.util.*;
 
 
 // @TODO Add proper java doc comments
@@ -26,7 +27,7 @@ public class Product implements Part {
 
   private String searchkey = null;
 
-  private List<Product> parts = new ArrayList<Product>();
+  private List<Part> parts = new ArrayList<Part>();
 
 
   public double getPrice(){
