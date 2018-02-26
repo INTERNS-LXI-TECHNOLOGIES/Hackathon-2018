@@ -1,44 +1,76 @@
 package com.prasad.model;
-
+import java.util.*;
 
 // @TODO Add proper java doc comments
 
-class Product extends Part {
+public class Product implements Part {
 
 
   private String name;
   private String description;
   private TrueOrFalse display;
   private long id;
-  private doub1e maximumStockLevel;
-  private String name;
+  private double maximumStockLevel;
+ // private String name;
   private Double reOrderLevel;
   private String reference;
   private String searchKey;
   private List<Product> parts = new ArrayList<Product>();
 
-private void setName(String name)
+public void setName(String name)
 {
   this.name=name;
 }
-private String getName()
+public String getName()
 {
   return name;
 }
-private void setDescription(String description)
+public void setDescription(String description)
 {
   this.description=description;
 }
-private String getDescription()
+public String getDescription()
 {
   return description;
 }
-private long setId(long id)
+public void setId(long id)
 {
   this.id=id;
 }
-private long getId()
+public long getId()
 {
   return id;
+}
+public void setMaximumStockLevel(double maximumStockLevel)
+{
+  this.maximumStockLevel=maximumStockLevel;
+}
+public double getMaximumStockLevel()
+{
+  return maximumStockLevel;
+}
+public void setReOrderLevel(double reOrderLevel)
+{
+  this.reOrderLevel=reOrderLevel;
+}
+public double getReOrderLevel()
+{
+  return reOrderLevel;
+}
+public void setReference(String reference)
+{
+  this.reference=reference;
+}
+public String getReference()
+{
+  return reference;
+}
+public void setSearchKey(String searchKey)
+{
+  this.searchKey = searchKey;
+}
+public void isProductAvailableinStock()
+{
+  
 }
 }

@@ -1,8 +1,10 @@
+package com.prasad.controller;
+import com.prasad.model.*;
+public interface SaleController {
 
-class SaleController {
-
-amount  sell(Product productShopped, quantity) ;
-totalAmount() ;
+//amount  
+void sell(Product productShopped,int quantity) ;
+void totalAmount() ;
 
 
 

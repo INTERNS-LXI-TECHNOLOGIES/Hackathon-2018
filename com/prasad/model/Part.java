@@ -1,18 +1,18 @@
 // @TODO Add java doc comments
 
 package com.prasad.model;
-public abstract class Part {
+public interface Part {
 
 
-@override
-public double getPrice() ;
+//@override
+public double getPrice();
 
 
-@override
-public String getName() ;
+//@override
+public String getName();
 
-@override
-public double isProductAvailableinStock() ;
+//@override
+public double isProductAvailableinStock();
 
 
 }

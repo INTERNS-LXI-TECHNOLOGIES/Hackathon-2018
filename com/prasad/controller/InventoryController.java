@@ -1,15 +1,18 @@
-class InventoryControll {
+package com.prasad.controller;
+import java.util.*;
+import com.prasad.model.*;
+public interface InventoryController {
 
 
-private List<Products> inventory ;
+public List<Inventory> inventory = null;
 
 
-@override
-addStockToInventory( Product productToAdd, size quantitytoAdd) ;
+//@override
+void addStockToInventory( Product productToAdd, int quantitytoAdd) ;
 
 
-@override
-removeStockFromInventory( Product productToRemove, size quantityToRemove) ;
+//@override
+void removeStockFromInventory( Product productToRemove, int quantityToRemove) ;
 
 
 

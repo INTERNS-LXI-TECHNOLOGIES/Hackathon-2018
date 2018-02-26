@@ -1,31 +1,37 @@
 package com.prasad.model;
-class Shop {
+import java.util.*;
+import com.prasad.controller.*;
+public class Shop {
 
-private String shopName ;
-private Inventory inventory ;
-private int totalSales ;
-private List<Customer> customers ;
-
+private String shopName;
+private Inventory inventory;
+private int totalSale;
+private List<Customer> customers;
 
 private InventoryController inventorycontroller;
 private SaleController  SaleController ;
 
-
-public static void main(String args[]){
-
-//Create Shop
-//@Create Customers in Shop
-//@Create Inventory in Shopp
-//@Conduct sale 
-
-
-
-
-
+public void setShopName(String shopName)
+{
+	this.shopName=shopName;
 }
-
-
-
-
-
+public String getShopName()
+{
+return shopName;
+}
+public void setTotalSale(int totalSale)
+{
+	this.totalSale=totalSale;
+}
+public int getTotalSale()
+{
+	return totalSale;
+}
+public void createCustomer()
+{
+	customers.add(new Customer("customer1"));
+    customers.add(new Customer("customer2"));
+    customers.add(new Customer("customer3"));
+			
+}
 }
