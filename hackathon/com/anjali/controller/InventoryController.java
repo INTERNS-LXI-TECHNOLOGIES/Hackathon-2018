@@ -1,4 +1,8 @@
-package com.anjali.Product;
+/**
+*author: anjali
+*/
+
+package com.anjali.controller;
 
 
 public class InventoryController {
@@ -13,10 +17,6 @@ addStockToInventory( Product productToAdd, size quantitytoadd) ;
 
 @override
 removeStockFromInventory( Product productToRemove, size quantityToRemove) ;
-
-
-
-
 
 
 }

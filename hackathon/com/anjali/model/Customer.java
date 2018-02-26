@@ -1,3 +1,6 @@
+/**
+*author: anjali
+*/
 package com.anjali.model;
 
 public class Customer {
@@ -10,8 +13,7 @@ public void setName(String name){
 }
 
 public void getName(){
-	return name;
-	
+	return name;	
 }
 
 public void setCashInHand(String name){
@@ -20,10 +22,6 @@ public void setCashInHand(String name){
 
 public void getCashInHand(){
 	return name;
-	
 }
-
-
-
 
 }

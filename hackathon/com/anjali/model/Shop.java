@@ -1,3 +1,7 @@
+/**
+*author: anjali
+*/
+
 package com.anjali.model;
 
 public class Shop {
@@ -5,7 +9,9 @@ public class Shop {
 private String shopName ;
 private Inventory inventory ;
 private int totalSales ;
-private List<Customer> customers ;
+private List<Customer> customerList ;
+private InventoryController inventorycontroller;
+private SaleController  SaleController ;
 
 public void setShopName(String shopName){
 	this.shopName=shopName;
@@ -39,25 +45,28 @@ public List<Customer> getTotalSales(){
 	return customers;
 }
 
-InventoryController inventorycontroller;
-SaleController  SaleController ;
+
 
 
 public static void main(String args[]){
-
+Scanner sc=new Scanner();
 //Create Shop
+
 //@Create Customers in Shop
-//@Create Inventory in Shopp
-//@Conduct sale 
+customerList=new ArrayList<Customer>();
 
-
-
-
+for(int i=0;i<2;i++){
+	Customer customer=new Customer();
+	System.out.println("enter customer name;");
+	customer.setName(sc.next());
+	System.out.println("enter customers cash in hand;");
+	customer.setCashInHand(sc.nextInt());
+	customerList.add(customer);
 
 }
 
+//@Create Inventory in Shopp
+//@Conduct sale 
 
-
-
-
+}
 }

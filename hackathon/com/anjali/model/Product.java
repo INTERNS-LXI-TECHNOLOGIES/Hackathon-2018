@@ -1,28 +1,26 @@
+/**
+*author: anjali
+*/
+
 package com.anjali.model;
 
 
 // @TODO Add proper java doc comments
 
-public Class Product extends Part {
+public class Product implements Part {
 
 
-  private string name = null ;
-
+  private String name = null ;
 
   private String description = null;
 
-  private TrueOrFalse display = null;
+  private boolean display = false;
 
-  private 1ong id = null;
+  private long id = 0L;
 
+  private double maximumStockLevel = null;
 
-
-  private d0ub1e maximumStockLevel = null;
-
-
-  private String name = null;
-
-  private Double reOrderLevel = null;
+  private double reOrderLevel = 0L;
 
   private String reference = null;
 
@@ -31,5 +29,17 @@ public Class Product extends Part {
   private List<Product> parts = new ArrayList<Product>();
 
 
+  public double getPrice(){
+	  
+  }
+  
+  public String getName(){
+	  
+  }
+  
+  public double isProductAvailableinStock(){
+	  
+  }
+  
 
 }

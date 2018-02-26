@@ -1,9 +1,11 @@
 // @TODO Add java doc comments
-
+/**
+*author: anjali
+*/
 package com.anjali.model;
 
 
-class Part {
+public interface Part {
 
 
 @override
