@@ -51,7 +51,7 @@ public class Shop {
 
     public void showCustomers() {
         for (Customer c: this.customers) {
-            System.out.println(c);
+            System.out.println("Name:"+c.getName()+" CashInHand:"+c.getCashInHand());
         }
     }
 

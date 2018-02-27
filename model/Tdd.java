@@ -29,6 +29,7 @@ public class Tdd {
             Customer customer = new Customer(cusName, cash);
             shop.getCustomers().add(customer);
         }
+        System.out.println("///////SHOW CUSTOMERS");
         shop.showCustomers();
 
         System.out.println("///////INVENTORY////////");
