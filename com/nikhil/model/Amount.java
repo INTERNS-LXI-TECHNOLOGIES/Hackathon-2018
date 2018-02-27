@@ -1,5 +1,5 @@
 package com.nikhil.model;
-public class TrueOrFalse
+public class Amount
 {
 
 }

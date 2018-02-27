@@ -1,16 +1,23 @@
 package com.nikhil.controller;
+import com.nikhil.model.*;
+import java.util.*;
 public class InventoryController {
 
 
-List<Products> inventory ;
+public List<Product> inventory ;
 
 
-@override
-addStockToInventory( Product productToAdd, size quantitytoadd) ;
+/**@override
+*/
+public void addStockToInventory( Product productToAdd, int quantityToAdd) 
+{
+	
+}
 
 
-@override
-removeStockFromInventory( Product productToRemove, size quantityToRemove) ;
+/**@override
+*/
+public void removeStockFromInventory( Product productToRemove, double quantityToRemove) {}
 
 
 
