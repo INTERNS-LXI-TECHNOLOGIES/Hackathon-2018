@@ -1,0 +1,4 @@
+class InventoryProduct extends Product
+{
+
+}
