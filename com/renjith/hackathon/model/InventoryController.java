@@ -3,17 +3,18 @@ import java.util.ArrayList;
 public class InventoryController {
 
 
-ArrayList<Product> inventory=new ArrayList<Product>() ;
+ArrayList<Product> inventory=new ArrayList<Product>();
 
-public void addStockToInventory( Product product){
+public ArrayList<Product> addStockToInventory( Product product){
 	
 inventory.add(product);	
 	
+	return inventory;
 }
 
-public void removeStockFromInventory( Product productToRemove, int quantityToRemove){
+public void removeStockFromInventory( Product product){
 	
-	
+	inventory.remove(product);
 	
 }
 

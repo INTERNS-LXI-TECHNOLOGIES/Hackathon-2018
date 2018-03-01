@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.List;
 public class Product extends Part {
 
 
@@ -9,6 +8,8 @@ public class Product extends Part {
   private String description;
   
   private int qnty;
+  
+  private int price;
   
 
  // private Boolean display = null;
@@ -64,9 +65,12 @@ public Long getId(){
   
  // public void setParts()
   
- public int getPrice() {
-	 int y=1;
-	 return y;
+  public void setPrice(int price){
+	  this.price=price;
+  }
+  
+ public int getPrice(){
+	 return price;
  }
 
 
