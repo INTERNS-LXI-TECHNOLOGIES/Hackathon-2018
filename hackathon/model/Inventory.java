@@ -1,9 +1,12 @@
-package hackathon.inventory;
-import hackathon.model.controller.InventoryController;
-public class Inventory{
+package model.inventory;
 
-addStockToInventory( Product productToAdd, size quantitytoadd) ;
+public abstract class Inventory{
 
-removeStockFromInventory( Product productToRemove, size quantityToRemove) ;
+ void addStockToInventory( Product productToAdd, size quantitytoadd) 
+ {
+ }
+
+void removeStockFromInventory( Product productToRemove, size quantityToRemove) {
+}
 
 }

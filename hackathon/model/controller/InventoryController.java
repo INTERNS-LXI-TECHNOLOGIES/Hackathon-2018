@@ -1,16 +1,18 @@
-package hackathon.model.controller;
-class InventoryControll extends Inventory {
+package model.controller;
+abstract class InventoryController extends Inventory {
 
 
-List<Product> inventory  = new ArrayList<Product>();
+List<Product> inventory  = new ArrayList<Inventory>();
 
 
-@override
-addStockToInventory( Product productToAdd, size quantitytoadd) ;
+
+ public void addStockToInventory( Product productToAdd, Size quantitytoadd) {
+ }
 
 
-@override
-removeStockFromInventory( Product productToRemove, size quantityToRemove) ;
+
+ public void removeStockFromInventory( Product productToRemove, Size quantityToRemove) {
+}
 
 
 

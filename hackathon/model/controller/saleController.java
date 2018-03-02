@@ -1,14 +1,15 @@
-package hackathon.model.controller;
-class SaleController  {
+package model.controller;
+abstract class SaleController  {
 
 
 
 
+public Amount  sell(Product productShopped,int  quantity) {
+}
 
-amount  sell(Product productShopped,int  quantity) ;
 
-
-totalAmount() ;
+ public void totalAmount() {
+}
 
 
 
