@@ -1,4 +1,5 @@
 package com.sahal.model;
+import java.util.*;
 class InventoryControll {
 	
 
@@ -7,8 +8,10 @@ Inventory inventory;
 
 public void addStockToInventory( Product productToAdd, int quantitytoadd) 
 {
-	for(int i=0;i<quantitytoadd;i++){
-	this.inventory.products.add(productToAdd);
+	if (inventory.products.containsKey(productToAdd)) {
+	  inventory.products.put(productToAdd, inventory.products.get(productToAdd) + quantitytoadd );
+	} else {
+	  inventory.products.put(productToAdd, quantitytoadd);
 	}
 }
 
@@ -16,22 +19,23 @@ public void addStockToInventory( Product productToAdd, int quantitytoadd)
 
 public void removeStockFromInventory( Product productToRemove, int quantityToRemove) 
 {
-	
-	if(quantityCheck)
+	if(inventory.products.containsKey(productToRemove))
+	{
+	if(quantityCheck(quantityToRemove>inventory.products.get(productToRemove))
+	{
+		inventory.products.put(productToRemove, inventory.products.get(productToRemove) - quantityToRemove );
+	}
+	else if(quantityCheck(quantityToRemove==inventory.products.get(productToRemove))
 	{
 		
+		 inventory.products.put(productToRemove, 0);
 	}
-}
-private int quantityCheck(Product product)
-{
-	int count=0;
-	for(int i=0;i<inventory.product.size();i++){
-	if(product.getId==inventory.product.get(i).getId)
+	else
 	{
-		count++;
+		System.out.println("Not enough stock available ");
 	}
+	
 	}
-	return count;
 }
 
 

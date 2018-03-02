@@ -1,5 +1,6 @@
 // @TODO Add java doc comments
-
+package com.sahal.model ;
+import java.util.*;
 
 class Part {
 

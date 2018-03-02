@@ -1,4 +1,6 @@
-import java.util.Scanner;
+package com.sahal.test;
+
+import java.util.*;
 class Tdd
 {
 public static void main(String args[]){

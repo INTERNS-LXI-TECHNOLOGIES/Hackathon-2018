@@ -1,4 +1,6 @@
+package com.sahal.model ;
+import java.util.*;
 class Inventory
 {
-List<Product> products= new ArrayList<Product>();
+HashMap<Product,Integer> products=new HashMap<Product,Integer>(); 
 }

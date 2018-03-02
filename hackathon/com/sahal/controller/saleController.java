@@ -1,14 +1,18 @@
 package com.sahal.controller;
+import java.util.*;
 class SaleController {
 
 
 List<Sale> saleProducts= new ArrayList<Sale>();
+InventoryController inventoryController=new InventoryController();
 
 
 Double sell(Product productShopped,int quantity)
 {
-	
+
 	saleProducts.add(new Sale(productShopped,quantity,(double)productShopped.getPrice()*quantity));
+	
+	
 }
 
 

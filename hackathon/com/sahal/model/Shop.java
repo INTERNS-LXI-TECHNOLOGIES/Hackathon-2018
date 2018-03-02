@@ -1,4 +1,5 @@
-package com.sahal.model
+package com.sahal.model;
+import java.util.*;
 class Shop {
 
 String shopName ;

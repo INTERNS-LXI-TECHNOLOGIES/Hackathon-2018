@@ -1,4 +1,5 @@
 package com.sahal.model ;
+import java.util.*;
 
 
 // @TODO Add proper java doc comments
