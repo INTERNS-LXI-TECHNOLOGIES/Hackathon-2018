@@ -4,7 +4,7 @@ import com.prasad.model.*;
 public interface InventoryController {
 
 
-public List<Inventory> inventory = null;
+public List<Product> inventory = null;
 
 
 //@override

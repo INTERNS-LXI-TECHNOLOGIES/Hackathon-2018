@@ -9,6 +9,7 @@ public static void main(String args[])
 //Create Shop
 	Shop shop = new Shop();
 	shop.setShopName("V G stores");
+	shop.display();
 //@Create Customers in Shop
 //@Create Inventory in Shopp
 //@Conduct sale 

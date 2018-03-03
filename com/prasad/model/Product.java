@@ -16,7 +16,7 @@ public class Product implements Part {
   private String reference;
   private String searchKey;
   private List<Product> parts = new ArrayList<Product>();
-
+ 
 public void setName(String name)
 {
   this.name=name;
@@ -69,8 +69,12 @@ public void setSearchKey(String searchKey)
 {
   this.searchKey = searchKey;
 }
-public void isProductAvailableinStock()
+public double isProductAvailableinStock()
 {
-  
+return 0;
+}
+public double getPrice()
+{
+return 0;
 }
 }
