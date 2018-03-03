@@ -1,18 +1,32 @@
 // @TODO Add java doc comments
 
 
-class Part {
+public class Part {
 
 
-@override
-public double getPrice() ;
+//@override
+private double price;
+private String name;
+public void  setPrice(double price)
+{
+	this.price = price;
+}
+public double getPrice()
+{
+	return price;
+}
+//@override
+public void setName(String name)
+{
+	this.name = name;
+}
+public String getName()
+{
+	return name;
+}
 
-
-@override
-public String getName() ;
-
-@override
-public double isProductAvailableinStock() ;
-
-
+//@override
+public double isProductAvailableinStock{
+	
+}
 }
