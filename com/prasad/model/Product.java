@@ -77,4 +77,9 @@ public double getPrice()
 {
 return 0;
 }
+public String toString()
+{
+	return id+"\n"+name+"\n"+description;
+	
+}
 }

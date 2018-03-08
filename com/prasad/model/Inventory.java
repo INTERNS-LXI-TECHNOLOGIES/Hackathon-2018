@@ -1,10 +1,13 @@
 package com.prasad.model;
 import java.util.*;
-public class Inventory
+
+import com.prasad.controller.InventoryController;
+public class Inventory implements InventoryController
 {
 	private Product product = new Product();
 	Scanner s = new Scanner(System.in);
 	Scanner ss = new Scanner(System.in);
+	private List<Product> productList = new ArrayList<Product>();
 
 public Product createProduct()
 {
@@ -33,5 +36,24 @@ public Product createProduct()
 
 	return product;   		
 	
+}
+public void addStockToInventory(Product productToAdd, int quantitytoAdd) {
+	
+	System.out.println(productToAdd);
+	  productList.add(productToAdd);
+	  System.out.println(".....................inventory......................");
+	  System.out.println("Your prdouct added to inventory..\nProduct :"+productList.get(0));
+	 
+}
+
+
+public void removeStockFromInventory(Product productToRemove, int quantityToRemove) {
+	
+	if(productToRemove.getId()==productList.get(0).getId())
+	{
+		System.out.println("products in the inventory\n"+productList.get(0));
+		productList.remove(productToRemove);
+		System.out.println("Removed product from stock..Inventory stock :"+productList);
+	}
 }
 }
