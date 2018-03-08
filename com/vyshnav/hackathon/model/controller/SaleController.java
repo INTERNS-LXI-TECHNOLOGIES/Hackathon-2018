@@ -1,10 +1,10 @@
-package com.vyshnav.hackathon;
+package com.vyshnav.hackathon.model.controller;
 
 public class SaleController {
 	
-	private double totalAmount;
+	private double totalAmount = 0.00;
 
-	public void sell(Product product, quantity){
+	public void printSaleDetails(Product product, quantity){
 		System.out.println("\n SALES: ");
 		System.out.println("\n Product Name = "+product.getName());
 		System.out.println("\n Product Price = "+product.getPrice());
@@ -16,7 +16,7 @@ public class SaleController {
 	}
 	
 
-	public void totalAmount(){
+	public void printTotalAmount(){
 		System.out.println("\n Total Amount = "+totalAmount);
 	}
 

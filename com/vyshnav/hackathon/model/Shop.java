@@ -1,5 +1,4 @@
-package com.vyshnav.hackathon;
-package com.vyshnav.hackathon;
+package com.vyshnav.hackathon.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,7 @@ public class Shop {
 		System.out.println("\n Dispplay inventories		1");
 		System.out.println("\n Add inventory		2");
 		System.out.println("\n Add product		3");
-		System.out.println("\n Customer Sales		4");
+		System.out.println("\n Customer Sales		4");  //to implement
 		System.out.println("\n ====================================");	
 	}
 	
@@ -50,6 +49,7 @@ public class Shop {
 				
 				int id, maximumStockLevel,reOrderLevel;
 				String name;
+				List<Product> productList;
 				Inventory inventory;
 				InventoryController inventoryController;
 				
@@ -61,23 +61,40 @@ public class Shop {
 				maximumStockLevel = scanner.nextInt();
 				System.out.println("\n Enter reorder level:");
 				reOrderLevel = scanner.nextInt();
-				// ====> create productlist here later <====
+				
+				// ====> create productlist here <====  or create a Product Controller
+				productList = addProduct();
+	
 				inventory = new Inventory(id, name, maximumStockLevel, reOrderLevel, productList);
 				inventoryController = new InventoryController();
 				inventoryController.addInventory(inventory);
 				
 			} else if (code==3){
 				
+				int id;
 				double price;
 				String name;
 				Product product;
+				List<Product> productList;
+				List<Inventory> inventoryList;
+				
+				System.out.println("\n Enter inventory id: ");
+				id = scanner.nextInt();
+				InventoryController inventoryController = new InventoryController();
+				inventoryList = inventoryController.getInventoryList();
+				for (Inventory inventory : inventoryList){
+					if (inventory.getId==id){
+						productList = inventory.getProductList();
+					}
+				}
 				
 				System.out.println("\n Enter product name: ");
 				name = scanner.next();
 				System.out.println("\n Enter product price: ");
 				price = scanner.nextInt();
 				product(name, price);
-				// ====> add product to corresponding inventory here later <====
+				// ====> add product to corresponding inventory here <====
+				productList.add(product);
 				
 			} else if (code==4){
 				
@@ -110,6 +127,29 @@ public class Shop {
 			}
 		}
 		scanner.close();
+	}
+	
+	public List<Product> addProduct(){
+		
+		String name;
+		double price;
+		Product product;
+		List<Product> productList = new ArrayList<Product>();
+		
+		while(true){		
+			System.out.println("\n Enter product name:");
+			name = scanner.next();
+			System.out.println("\n Enter product price:");
+			price = scanner.nextInt();
+			product = new Product(name, price);
+			productList.add(product);
+			System.out.println("\n Dou you want to add another product: (yes/no)");
+			choice = scanner.next();	
+			if (choice.equals("no")){
+				break; 
+			}
+		}
+		return productList;
 	}
 	
 	public String getShopName() {

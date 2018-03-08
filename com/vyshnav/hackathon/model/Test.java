@@ -1,4 +1,4 @@
-package com.vyshnav.hackathon;
+package com.vyshnav.hackathon.model;
 
 public class Test {		//cd notepad-workspace/Animal Game
 
@@ -9,8 +9,6 @@ public class Test {		//cd notepad-workspace/Animal Game
 	System.out.println("n " + shop.getShopName + " " + Configuration.ADDRESS);
 	
 	shop.doStuff();
-	
-
 	
 	}
 }

@@ -1,4 +1,4 @@
-package com.vyshnav.hackathon;
+package com.vyshnav.hackathon.config;
 
 public class Configuration{
 	public static final String APP_NAME = "Inventory Shoppie";

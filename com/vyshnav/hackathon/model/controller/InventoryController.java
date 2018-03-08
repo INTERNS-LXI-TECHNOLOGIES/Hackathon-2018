@@ -1,17 +1,19 @@
-package com.vyshnav.hackathon;
+package com.vyshnav.hackathon.model.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryController {
 
-	private List<Inventory> inventoryList;
+	private List<Inventory> inventoryList = new ArrayList<Inventory>();
 	
 	
 	public void displayInventoryListForCustomer(){
 		for (Inventory inventory : inventoryList){
 			Sysytem.out.print("\n Id = "+inventory.id);
 			Sysytem.out.print(" Name = "+inventory.name);
+			for (Product product : inventory.productList){
+////////////////////
 		}
 	}
 	
@@ -25,20 +27,19 @@ public class InventoryController {
 	}
 	
 
-	public List<Inventory> getInventoryList(){
+	public List<Inventory> getInventoryList(){		
 		return inventoryList;
 	}
 	public void setInventoryList(List<Inventory> inventoryList){
 		this.inventoryList = inventoryList;
 	}
 
-	public void addInventory(Inventory inventory /*, size quantitytoadd*/){
-		inventoryList.add(inventory);										//quantityToAdd
+	public void addInventory(Inventory inventory){
+		inventoryList.add(inventory);										
 	}
 
-	public void removeInventory(Inventory inventory /*, size quantityToRemove */){
-		inventoryList.remove(inventory);									//quantityToRemove
-
+	public void removeInventory(Inventory inventory){
+		inventoryList.remove(inventory);									
 	}
 
 }

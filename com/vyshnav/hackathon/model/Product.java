@@ -1,5 +1,5 @@
 // @TODO Add java doc comments
-package com.vyshnav.hackathon;
+package com.vyshnav.hackathon.model;
 
 
 public class Product {
