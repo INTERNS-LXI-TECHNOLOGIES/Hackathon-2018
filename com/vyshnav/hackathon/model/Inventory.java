@@ -2,31 +2,35 @@ package com.vyshnav.hackathon.model;
 import java.util.ArrayList;
 import java.util.List;
 
-// @TODO Add proper java doc comments
-
 public Class Inventory {
 	
+	public Inventory(){}
+	
 	public Inventory(int id, String name, int maximumStockLevel, int reOrderLevel, List<Product> productList){
-		// code later
+		this.id = id;
+		this.name = name;
+		this.maximumStockLevel = maximumStockLevel;
+		this.reOrderLevel = reOrderLevel;
+		this.productList = productList;
 	}
 
     private int id;
 	private String name;
     private double maximumStockLevel;
     private double reOrderLevel;
-	private List<Product> productList = new ArrayList<Product>();
+	private List<Product> productList;
 
-	public String getName(){
-		return name;
-	}
-	public void setName(String name){
-		this.name = name;
-	}
 	public int getId(){
 		return id;
 	}
 	public void setId(int id){
 		this.id = id;
+	}
+	public String getName(){
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
 	}
 	public int getMaximumStockLevel(){
 		return maximumStockLevel;
@@ -40,20 +44,10 @@ public Class Inventory {
 	public void setReOrderLevel(int reOrderLevel){
 		this.reOrderLevel = reOrderLevel;
 	}
-	
-
-  //private String description = null;
-
-  //private TrueOrFalse display = null;
-
-  //private String name = null;
-
-
-  //private String reference = null;
-
-  //private String searchkey = null;
-
-
-
-
+	public List<Product> getProductList(){		
+		return productList;
+	}
+	public void setProductList(List<Product> productList){
+		this.productList = productList;
+	}
 }

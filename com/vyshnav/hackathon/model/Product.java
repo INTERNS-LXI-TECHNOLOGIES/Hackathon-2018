@@ -1,17 +1,25 @@
-// @TODO Add java doc comments
 package com.vyshnav.hackathon.model;
-
 
 public class Product {
 	
-	private String name;
-	private double price;
+	public Product(){}
 	
-	public Product(String name, double price){
-		thi.name = name;
+	public Product(int id, String name, double price){
+		this.id = id;
+		this.name = name;
 		this.price = price;
 	}
+	
+	private int id;
+	private String name;
+	private double price;
 
+	public int getId(){
+		return id;
+	}
+	public void setId(int id){
+		this.id = id;
+	}
 	public String getName(){
 		return name;
 	}
@@ -24,14 +32,4 @@ public class Product {
 	public void setPrice(double price){
 		this.price = price;
 	}
-	
-	public boolean isProductAvailableinStock(Inventory inventory){ ////////////////
-		 if (inventory.productList != 0){
-			 return true
-		 } else{
-			 return false
-		 }
-	}
-
-
 }
